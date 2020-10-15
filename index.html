@@ -17,6 +17,8 @@
   <div id="intro">
     <p>Resources for the 'Code Alert' Creative Computing Club.</p>
     <p>During this workshop, you will design a prototype device to limit the spread of Covid-19.</p>
+    <p>This page recaps what <a href="https://bit.ly/Oct20CCC" target="_blank">we discussed as a group</a>.</p>
+    <p>To skip to the examples and ideas, <a href="#extensions">click here</a>.</p>
     <br>
   </div>
 
@@ -27,19 +29,55 @@
     <p>Follow the instructions to <a href="https://scienceoxford.github.io/do-your-bit/pair-microbit.html" target="_blank">pair your micro:bit</a> and create your first program!</p>
     <img src=".\images\instructions-postit.PNG" alt="Instructions-- Step 1: Pair your microbit. Step 2: Put the code on your micro:bit. Step 3: Experiment with the code blocks on the right. Step 4: Experiment with new blocks from the menu on the left." width="1000px" height="auto">
     <br>
+    <br>
   </div>
 
   <div id="radio" class="left">
     <h3>Setting up the radio</h3>
-    <p></p>
-    <img src=".\images\radio-setup.PNG" alt="Code-- ADD DESCRIPTION HERE" width="1000px" height="auto">
+    <p>The ability to transmit information using radio waves is built into the micro:bit. The means that micro:bits can send to, and receive information from, other micro:bits!</p>
+    <p><strong>For this activity you have two micro:bits, and you will put the same program on both of them.</strong></p>
+    <p>Recreate the image below using the <strong>Radio</strong> and <strong>Basic</strong> menus. Scroll down for instructions and debugging tips, or skip to the <a href=#proximity>next step</a> once your new code is working correctly!</p>
+    <br>
+    <img src=".\images\radio-setup.PNG" alt="Code-- on start, radio set group 1; forever, radio send string hi, pause (ms) 100; on radio received receivedString, show string receivedString" width="1000px" height="auto">
+    <h4>on start</h4>
+    <p>So that your micro:bits only listen out for messages from each other (not everyone else in the room!), you will set a <strong>group</strong> number. If you are in our workshop, use your laptop's number.</strong>
+    <p>Find the <strong>radio set group</strong> block in the <strong>Radio</strong> menu, and put it inside your <strong>on start</strong> loop. Remember to change the group number from 1 to your group!</p>
+    <div class="debugging">
+      <p><strong>Debugging tip!</strong> If you get weird messages, you might be receiving someone else's code! Double-check your group number.</p>
+    </div>
+    <br>
+    <h4>forever</h4>
+    <p>Next, set your micro:bits to send out a message on repeat.</p>
+    <p>Find the <strong>radio send string</strong> block in the <strong>Radio</strong> menu, and put it inside your <strong>forever</strong> loop. Change the message to whatever you like!</p>
+    <p>It is a good idea to slow the messages down a bit - otherwise your micro:bit will be sending messages so quickly that the other micro:bit might get overwhelmed and give you an error message.</p>
+    <p>Find the <strong>pause</strong> block in the <strong>Basic</strong> menu and add it to your <strong>forever</strong> loop.</p>
+    <p>The pause is in <strong>milliseconds</strong> - 100ms is 1 tenth of a second, so your micro:bit will still send messages very quickly.</p>
+    <div class="debugging">
+      <p><strong>Debugging tip!</strong> If you have other code running as well as the radio code, lots of things might be happening on the micro:bit's display too quickly for you to see properly. Either remove this other code or make your radio pause longer.</p>
+    </div>
+    <br>
+    <h5>on radio received</h5>
+    <p>Now you can tell the micro:bit to do something with the messages it receives.</p>
+    <p>Find the <strong>on radio received (receivedString)</strong> loop from the <strong>Radio</strong> menu. There are three very similar blocks so look carefully to chose the right one.</p>
+    <p>Add a <strong>show string</strong> block from the <strong>Basic</strong> menu.</p>
+    <p>Instead of displaying a message you type into the <strong>show string</strong> block, we want it to display the radio message, which is <strong>receivedString</strong>.</p>
+    <p>Click on red <strong>receivedString</strong> oval from the <strong>on radio received</strong> loop, and drag into position - this will copy the block.</p>
+    <div class="debugging">
+      <p><strong>Debugging tip!</strong> If your message is not showing in the emulator, check that you are using <strong>receivedString</strong>, not <strong>receivedNumber</strong>, and that in the previous step you are using <strong>radio send string</strong> not <strong>send number</strong>. If they do not match up, the micro:bit will not interpret the messages the way you expect.</p>
+    </div>
+    <br>
+    <p><strong>Check your new code on your micro:bits before moving on</strong> - do they both show the string that you asked them to send?</p>
+    <br>
     <br>
   </div>
 
   <div id="proximity" class="left">
-    <h3>Coding the proximity sensor</h3>
-    <p></p>
-    <img src=".\images\ADD.PNG" alt="Code-- ADD DESCRIPTION HERE" width="1000px" height="auto">
+    <h3>Coding the proximity sensor INCOMPLETE</h3>
+    <p>With a couple of new blocks, you can use the radio to work out how close your two micro:bits are to each other.</p>
+    <p>Recreate the image below using the <strong>Creative Computing</strong>, <strong>Radio</strong> and <strong>Math</strong> menus. Scroll down for instructions and debugging tips, or skip to the <a href=#extensions>end</a> once your new code is working correctly!</p>
+    <p><strong>signal</strong> is some code we wrote for you, to convert the information the micro:bit sends into something easier to use.</p>
+    <p>You can <a href="signal.html" target="_blank">write this code yourself</a>, to give you more control over the numbers.<p>
+    <img src=".\images\proximity-code.PNG" alt="Code-- on radio received receivedString, plot bar graph of signal, up to 9" width="1000px" height="auto">
     <br>
   </div>
 
@@ -50,6 +88,7 @@
   </div>
 
   <nav class="links bg_green">
+    <a href="" target="_blank">use the proximity sensor</a>
     <a href="" target="_blank">create a timer</a>
     <a href="" target="_blank">make it beep</a>
     <a href="" target="_blank">design an animation</a>
