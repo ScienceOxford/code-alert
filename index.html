@@ -74,10 +74,25 @@
   <div id="proximity" class="left">
     <h3>Coding the proximity sensor INCOMPLETE</h3>
     <p>With a couple of new blocks, you can use the radio to work out how close your two micro:bits are to each other.</p>
-    <p>Recreate the image below using the <strong>Creative Computing</strong>, <strong>Radio</strong> and <strong>Math</strong> menus. Scroll down for instructions and debugging tips, or skip to the <a href=#extensions>end</a> once your new code is working correctly!</p>
+    <p>Edit your <strong>on start</strong> and <strong>on radio received</strong> loops to match the image, below using the <strong>Led</strong>, <strong>Creative Computing</strong> and <strong>Radio</strong> menus. Scroll down for instructions and explanations, or skip to the <a href=#extensions>end</a> once your new code is working correctly!</p>
     <p><strong>signal</strong> is some code we wrote for you, to convert the information the micro:bit sends into something easier to use.</p>
-    <p>You can <a href="signal.html" target="_blank">write this code yourself</a>, to give you more control over the numbers.<p>
-    <img src=".\images\proximity-code.PNG" alt="Code-- on radio received receivedString, plot bar graph of signal, up to 9" width="1000px" height="auto">
+    <p>You can <a href="https://microbit.org/projects/make-it-code-it/proximity-beacon/" target="_blank">write this code yourself</a> if you like to allow you to change the numbers and have more control over your program.<p>
+    <img src=".\images\proximity-code.PNG" alt="Code-- on radio received receivedString, plot bar graph of signal, up to 9" width="600px" height="auto">
+    <br>
+    <h4>on start</h4>
+    <p>Click on the <strong>Radio</strong> menu, then click the three dots (...) underneath it, still on the menu. This takes you to some extra blocks!</p>
+    <p>Add the <strong>radio set transmit power</strong> block inside your <strong>on start</strong> loop, and change the number to <code>1</code>.</p>
+    <p>This reduces the tranmission power, because we want to transmit over short distances.</p>
+    <br>
+    <h5>on radio received</h5>
+    <p>Remove your <strong>show string</strong> block - you are going to replace it with a graph of the radio message signal strength.</p>
+    <p>Open the <strong>Led</strong> menu, and drop the <strong>plot bar graph</strong> block into your <strong>on radio received</strong> loop.</p>
+    <p>Drop the <strong>signal</strong> block from the <strong>Creative Computing</strong> menu into the top <code>0</code>, and change the second <code>0</code> to <code>9</code>.</p>
+    <br>
+    <p><strong>Test out your program</strong> - how many lights are on when your micro:bits are arm-width apart? How many when they are at opposite sides of your table?</p>
+    <p>The higher the signal strength (the closer the micro:bits are together), the more lights will light up on the micro:bit!</p>
+    <p>What happens if you change the number <code>9</code> on your bar graph options to a higher or lower number?</p>
+    <br>
     <br>
   </div>
 
