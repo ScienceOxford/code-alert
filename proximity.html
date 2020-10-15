@@ -17,20 +17,29 @@
   <div id="intro" class="left">
     <p>You have programmed a way to visually see how close together two micro:bits are.</p>
     <p><strong>Experiment to work out what the graph on the micro:bits look like when they are 2m apart (your table is approximately 1.5m long).</strong></p>
-    <p>You can edit your code so that the micro:bits do one thing when they are <strong>less than 2m apart</strong>, and something different when they are <strong>more than 2m apart</strong>.</p>
+    <p>You can edit your code so that the micro:bits do one thing when they are <strong>closer than 2m</strong>, and something different when they are <strong>more than 2m apart</strong>.</p>
     <br>
   </div>
 
   <div id="if-else" class="left">
-    <h3>title</h3>
-    <p>explanation</p>
+    <h3>if, then, else</h3>
+    <p>When your micro:bits are close together the signal strength is higher than when they are far apart. The <strong>signal</strong> block gives you a number between <code>0</code> and <code>9</code>.</p>
+    <p>Use the blocks in the <strong>Logic</strong> menu to get something happening <strong>if the signal is less than 4</strong>, and something different happening if this is not true.</p>
+    <p>Recreate the image below using the <strong>Logic</strong> and <strong>Basic</strong> menus. Scroll down for instructions, or skip to the <a href=#calibration>calibration step</a> once your new code is working correctly!</p>
     <img src=".\images\if-signal-else.PNG" alt="Code example-- on radio received receivedString, if signal greater than 4 then, show icon yes, else, show icon no" width="600px" height="auto">
+    <br>
+    <p>Replace your bar graph block with an <strong>if true then else</strong> block from the <strong>Logic</strong> menu.</p>
+    <p>Also from the <strong>Logic</strong> menu, drop a <strong><code>0 < 0</code></strong> block to replace <strong>true</strong>.</p>
+    <p>Finally, replace the first <code>0</code> with <strong>signal</strong>, and the second <code>0</code> with <code>4</code>.</p>
+    <p>Put a <strong>show icon</strong> block into both of the spaces in the <strong>if then else</strong> block, and you are ready to test and calibrate your program!</p>
     <br>
   </div>
 
-  <div id="experiment" class="left">
-    <h3>title</h3>
-    <p>explanation</p>
+  <div id="calibration" class="left">
+    <h3>Calibrate your proximity sensor</h3>
+    <p>We chose to use <strong>less than 4</strong> in the previous step, but this might not be the signal strength at 2m.</p>
+    <p><strong>You will need to experiment with your micro:bits and choose the correct number.</strong></p>
+    <p>Make sure the updated code is on both of your micro:bits, and place them at each end of your table. If you are in our workshop, diagonally across your table is MEASURE, so close enough for your tests!</p>
     <br>
   </div>
 
