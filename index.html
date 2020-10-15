@@ -88,10 +88,13 @@
     <p>Remove your <strong>show string</strong> block - you are going to replace it with a graph of the radio message signal strength.</p>
     <p>Open the <strong>Led</strong> menu, and drop the <strong>plot bar graph</strong> block into your <strong>on radio received</strong> loop.</p>
     <p>Drop the <strong>signal</strong> block from the <strong>Creative Computing</strong> menu into the top <code>0</code>, and change the second <code>0</code> to <code>9</code>.</p>
+    <div class="debugging">
+      <p><strong>Debugging tip!</strong> The <strong>signal</strong> block uses a narrower signal strength range than the emulator, so this code is easier to test with physical micro:bits.</p>
+      <p><strong>Debugging tip!</strong> The <strong>signal</strong> block tells the micro:bit a number between <code>0</code> and <code>9</code>. If you have written your own signal code, then you may need to change this number as well.</p>
+    </div>
     <br>
     <p><strong>Test out your program</strong> - how many lights are on when your micro:bits are arm-width apart? How many when they are at opposite sides of your table?</p>
     <p>The higher the signal strength (the closer the micro:bits are together), the more lights will light up on the micro:bit!</p>
-    <p>What happens if you change the number <code>9</code> on your bar graph options to a higher or lower number?</p>
     <br>
     <br>
   </div>
