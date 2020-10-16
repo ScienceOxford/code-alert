@@ -15,16 +15,41 @@
   </header>
 
   <div id="intro" class="left">
-    <p>intro</p>
+    <p>A timer can be extrememly useful, if can count the minutes or hours, to give you repeating instructions, or can count down to a specific event.</p>
+    <p>How about reminding yourself to go and wash your hands every hour? Or setting a 2 minute countdown for washing your hands?</p>
     <br>
   </div>
 
-  <div id="structure" class="left">
-    <h3>title</h3>
-    <p>explanation</p>
-    <img src="" alt="Code example-- TO BE ADDED" width="300px" height="auto">
-    <p>You can design your images on paper <a href="Animations_v3.pdf" target="_blank" >using a 5x5 grid</a>.</p>
+  <div id="timer" class="left">
+    <h3>Set up IN PROGRESS</h3>
+    <p>The micro:bit doesn't have a clock, so it can't keep track of the time in the same way as we do.</p>
+    <p>It does know how long it has been turned on for, so you can use that to check how much time has passed.</p>
+    <p>The example code below sets up the timer using <strong>variables</strong>. Scroll down for instructions and debugging tips, or skip to the <a href=#next>end</a> once your new code is working correctly!</p>
+    <img src=".\images\timer-example.PNG" alt="Code example-- on start, set startTime to running time (ms); forever, set currentTime to running time (ms), if (currentTime - startTime) greater than 10000 then, show icon (heart)" width="1000px" height="auto">
     <br>
+    <h4>on start</h4>
+    <p>Click the <strong>Variables</strong> menu, and create a new variable called <strong>startTime</strong>. This is what you will use to 'start the timer'.</p>
+    <p>Still in the <strong>Variables</strong> menu, drop <strong>set startTime to 0</strong> into your <strong>on start</strong> loop.</p>
+    <p>Find <strong>running time (ms)</strong> in the <strong>Inputs</strong> menu and replace the <code>0</code> with it.</p>
+    <p>The micro:bit will now start timing as soon as it turns on - you might want to change this later, but it is good practice to debug your code before making any changes!</p>
+    <br>
+    <br>
+    <h4>forever</h4>
+    <p>Repeat what you did above, but this time for a variable called <strong>currentTime</strong>.</p>
+    <p>This is how you will keep track of how long the timer has been running for.</p>
+    <p>You now have two variables - one for the start time, and one for the current time. If you minus the start time from the current time, you know how many <strong>milliseconds</strong> the micro:bit has been running for!</p>
+    <p>Combine an <strong>if then</strong> block from the <strong>Logic</strong> menu, a <code><strong>0 - 0</strong></code> block from the <strong>Math</strong> menu, and your two variables from the <strong>Variables</strong> menu.</p>
+    <p>We chose <code>10 000</code> milliseconds, which is 10 seconds, as the amount of time for the timer to run before something happens.</p>
+    <br>
+    <p><strong>Test this out, and once the code is running sucessfully, start making some changes!</strong></p>
+    <br>
+  </div>
+
+  <div id="next" class="left">
+    <h3>Using the timer</h3>
+    <p>Is 10 seconds a useful timer? How long do you want to time for?</p>
+    <p>Do you want the timer to start when the micro:bit first turns on? You could use an <strong>input</strong> to start the timer instead.</p>
+    <p>What do you want to happen when the timer goes off? Try <a href="https://scienceoxford.github.io/ElecKit/" target="_blank">connecting a speaker or an LED</a>, to make the micro:bit beep or flash a warning.</p>
   </div>
 
   <nav class="links bg_green">
