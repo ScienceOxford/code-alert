@@ -15,16 +15,16 @@
   </header>
 
   <div id="intro" class="left">
-    <p>A timer can be extrememly useful, if can count the minutes or hours, to give you repeating instructions, or can count down to a specific event.</p>
+    <p>A timer can be extrememly useful, it can count the minutes or hours, to give you repeating instructions, or can count down to a specific event.</p>
     <p>How about reminding yourself to go and wash your hands every hour? Or setting a 2 minute countdown for washing your hands?</p>
     <br>
   </div>
 
   <div id="timer" class="left">
-    <h3>Set up IN PROGRESS</h3>
+    <h3>Set up</h3>
     <p>The micro:bit doesn't have a clock, so it can't keep track of the time in the same way as we do.</p>
     <p>It does know how long it has been turned on for, so you can use that to check how much time has passed.</p>
-    <p>The example code below sets up the timer using <strong>variables</strong>. Scroll down for instructions and debugging tips, or skip to the <a href=#next>end</a> once your new code is working correctly!</p>
+    <p>The example code below sets up the timer using <strong>variables</strong>. Scroll down for instructions, or skip to the <a href=#next>end</a> once your new code is working correctly!</p>
     <img src=".\images\timer-example.PNG" alt="Code example-- on start, set startTime to running time (ms); forever, set currentTime to running time (ms), if (currentTime - startTime) greater than 10000 then, show icon (heart)" width="1000px" height="auto">
     <br>
     <h4>on start</h4>
@@ -35,7 +35,7 @@
     <br>
     <br>
     <h4>forever</h4>
-    <p>Repeat what you did above, but this time for a variable called <strong>currentTime</strong>.</p>
+    <p>Repeat what you did above to create and set a variable called <strong>currentTime</strong>, this time place your code inside the <strong>forever</strong> loop.</p>
     <p>This is how you will keep track of how long the timer has been running for.</p>
     <p>You now have two variables - one for the start time, and one for the current time. If you minus the start time from the current time, you know how many <strong>milliseconds</strong> the micro:bit has been running for!</p>
     <p>Combine an <strong>if then</strong> block from the <strong>Logic</strong> menu, a <code><strong>0 - 0</strong></code> block from the <strong>Math</strong> menu, and your two variables from the <strong>Variables</strong> menu.</p>
